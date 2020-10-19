@@ -1,0 +1,192 @@
+:root {
+  --valid: rgb(25, 168, 0);
+  --invalid: rgb(230, 0, 0);
+}
+
+.data-context {
+  padding: 8px;
+  margin: 0.4em;
+
+  background: rgba(0, 0, 0, 0.1);
+  border: solid 1px hsl(0, 0%, 77%);
+  border-radius: 2px;
+}
+
+.data-control-expression,
+.data-content,
+.data-expression,
+.data-declaration {
+  padding: 4px;
+  margin: 0;
+
+  background: #fff;
+  border: solid 1px hsl(0, 0%, 77%);
+}
+
+.data-control-expression {
+  margin-bottom: 8px;
+}
+
+.data-control-expression br[data-cke-filler='true'] {
+  display: none;
+}
+
+.data-control-expression[valid='true'] {
+  color: var(--valid);
+}
+
+.data-control-expression[valid='false'] {
+  color: var(--invalid);
+}
+
+.data-control-expression::after {
+  display: inline;
+  padding-left: 4px;
+  vertical-align: sub;
+}
+
+.data-control-expression[valid='true']::after {
+  content: '✅';
+}
+
+.data-control-expression[valid='false']::after {
+  content: '❗';
+}
+
+.data-control-expression[valid='false'][error]::after {
+  display: block;
+  font-size: 12px;
+  content: attr(error);
+}
+
+.data-control-expression[valid='true'][description]::after {
+  display: block;
+  font-size: 12px;
+  content: attr(description);
+}
+
+.data-expression,
+.data-declaration {
+  background: whitesmoke;
+  outline-offset: -2px;
+}
+
+.data-expression[valid='true'],
+.data-declaration[valid='true'] {
+  color: var(--valid);
+}
+
+.data-expression[valid='false'],
+.data-declaration[valid='false'] {
+  color: var(--invalid);
+}
+
+.data-expression[valid='false'][error]:hover::after,
+.data-declaration[valid='false'][error]:hover::after,
+.data-expression[valid='true'][description]:hover::after,
+.data-declaration[valid='true'][description]:hover::after {
+  display: inline-block;
+  position: absolute;
+  transform: translateY(100%);
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+  font-size: 16px;
+  background: white;
+  max-width: 90vw;
+  z-index: 100;
+  white-space: pre;
+  text-align: left;
+}
+
+.data-expression[valid='false'][error]:hover::after,
+.data-declaration[valid='false'][error]:hover::after {
+  content: attr(error);
+  color: var(--invalid);
+  border: 1px solid var(--invalid);
+}
+
+.data-expression[valid='true'][description]:hover::after,
+.data-declaration[valid='true'][description]:hover::after {
+  content: attr(description);
+  color: var(--valid);
+  border: 1px solid var(--valid);
+}
+
+/* Convert inline attributes, so the style can be visible */
+.data-expression[bold='true'] {
+  font-weight: bold;
+}
+
+.data-expression[italic='true'] {
+  font-style: italic;
+}
+
+.data-expression[fontcolor] {
+  text-shadow: 0 0 20px lightslategrey;
+}
+
+.data-expression[fontsize='tiny'] {
+  font-size: 0.7em;
+}
+
+.data-expression[fontsize='small'] {
+  font-size: 0.85em;
+}
+
+.data-expression[fontsize='big'] {
+  font-size: 1.4em;
+}
+
+.data-expression[fontsize='huge'] {
+  font-size: 1.8em;
+}
+
+.data-expression .ck.ck-reset_all,
+.data-declaration .ck.ck-reset_all {
+  display: none;
+}
+
+.data-control-expression::before,
+.data-control-expression::after,
+.data-expression::before,
+.data-expression::after,
+.data-declaration::before,
+.data-declaration::after,
+.data-declaration {
+  display: inline;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.data-control-expression::before,
+.data-expression::before,
+.data-declaration::before {
+  padding-left: 4px;
+}
+
+.data-control-expression::before {
+  content: '⚙️ : ';
+}
+
+.data-expression::before {
+  content: '🏷 : ';
+}
+
+.data-declaration::before {
+  content: '📌 : ';
+}
+
+.ck-content {
+  padding: 40px;
+}
+
+/* Sweet alert */
+
+div#swal2-content {
+  text-align: left;
+}
+
+div.swal2-header {
+  align-self: flex-start;
+}
