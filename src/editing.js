@@ -1,13 +1,13 @@
-import { Context, Expression, ControlExpression } from 'js-template-builder';
+import { Context, Expression, ControlExpression } from 'js-template-builder/src/index';
 
-import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import Widget from '@ckeditor/ckeditor5-widget/src/widget';
+import Plugin from '../../@ckeditor/ckeditor5-core/src/plugin';
+import Widget from '../../@ckeditor/ckeditor5-widget/src/widget';
 
 import {
   toWidget,
   toWidgetEditable,
   viewToModelPositionOutsideModelElement,
-} from '@ckeditor/ckeditor5-widget/src/utils';
+} from '../../@ckeditor/ckeditor5-widget/src/utils';
 
 import InsertContextCommand from './commands/insert-context';
 import InsertExpressionCommand from './commands/insert-expression';

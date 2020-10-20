@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 
-import Command from '@ckeditor/ckeditor5-core/src/command';
+import Command from '../../../@ckeditor/ckeditor5-core/src/command';
 
 export default class ExpressionHelpCommand extends Command {
   execute() {

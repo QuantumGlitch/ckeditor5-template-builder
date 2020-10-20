@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2';
 
-import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+import Plugin from '../../@ckeditor/ckeditor5-core/src/plugin';
+import ButtonView from '../../@ckeditor/ckeditor5-ui/src/button/buttonview';
 
 export default class DynamicDataManagerUI extends Plugin {
   init() {

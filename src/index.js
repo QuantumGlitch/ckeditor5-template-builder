@@ -1,8 +1,8 @@
-import { ModelDefinition, RootContext } from 'js-template-builder';
+import { ModelDefinition, RootContext } from 'js-template-builder/src/index';
 
 import Editing from './editing';
 import UI from './ui';
-import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
+import Plugin from '../../@ckeditor/ckeditor5-core/src/plugin';
 
 const CHARSET_IDENTIFIER = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789';
 const ID_LENGTH = 10;
