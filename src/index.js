@@ -1,4 +1,4 @@
-import { ModelDefinition, RootContext } from 'js-template-builder/src/index';
+import { ModelDefinition, RootContext } from 'js-template-builder';
 
 import Editing from './editing';
 import UI from './ui';
